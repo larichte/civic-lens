@@ -108,22 +108,47 @@ body.dark-mode {
 }
 
 /* ///ADD/// Navigation Styles */
-/* -------------------------COME BACK TO THIS PLEASE---------------------------------- */
-.mobile-nav{
-  overflow: hidden;
+/* ----------------------------------COME BACK TO THIS PLEASE---------------------------------- */
+/* ------------------------------How do we get the box to check??------------------------------ */
+
+.menu-button{
   background-color: var(--news-flash);
   font-family: var(--font-body);
   color: var(--watchdog-white);
+  display: block;
   text-align: center;
-  text-decoration: none;
   padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.25em;
 }
 
-.mobile-nav a{
-  float: left;
+nav ul{
+  display: none;
+}
+
+#menu-toggle:checked + nav ul{
+  position: absolute;
+  width: 95%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+
+#menu-toggle:checked + nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: var(--watchdog-white);
+  background-color: var(--news-flash);
+  padding: 0.5rem;
+  border: 2px solid var(--blue-bulletin);
+  text-align: center;
 }
 
 /* ///ADD/// Global Layout Styles */
+
+/* ///ADD/// Global Text Styles */
+
 body{
   background-color: var(--watchdog-white);
   font-family: var(--font-body);
@@ -160,14 +185,14 @@ main section{
 
 h2, h3{
   font-family: var(--font-heading);
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-variation-settings: 'wght' 50;
   line-height: 1.5em;
 }
 
 h3{
   font-family: var(--font-heading);
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-variation-settings: 'wght' 50;
   line-height: 1.5em;
 }
@@ -183,7 +208,17 @@ blockquote{
   padding: 1rem;
   background-color: var(--news-flash);
   color: var(--watchdog-white);
-  margin: 0.5rem 0
+  margin: 0.5rem;
+  box-shadow: var(--shadow);
+  border-left: 2px solid var(--truth-text);
+  border-top: 2px solid var(--truth-text);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transition: var(--transition);
+}
+
+#breaking-news section:hover{
+  transform: scale(105%);
 }
 
 #breaking-news h3{
@@ -202,7 +237,12 @@ video{
   border: 1px solid var(--blue-bulletin);
   box-shadow: var(--shadow);
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
+  transition: var(--transition);
+}
+
+#featured-articles section:hover{
+  transform: scale(105%);
 }
 
 #featured-articles h3{
@@ -213,10 +253,106 @@ video{
   padding-top: 0.5rem;
 }
 
-form{}
+form{
+  background-color: var(--news-flash);
+  padding: 1rem;
+  color: var(--watchdog-white);
+  width: 100%;
+}
 
-/* ///ADD/// Global Text Styles */
+form label, form input{
+  display: block;
+  width: 95%;
+  font-size: 1em;
+}
 
+form input{
+  padding: 0 0.5em;
+  height: 2.5em;
+}
+
+form input:focus{
+  border: 2px solid var(--blue-bulletin);
+}
+
+form input:valid{
+  border: 2px solid var(--story-subtitle);
+}
+
+form fieldset{
+  border: 1px solid var(--blue-bulletin);
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: end;
+  width: 95%;
+}
+
+form fieldset input, form fieldset label{
+  height: 1.25em;
+  padding: 0.5rem 0;
+}
+
+form input[type=checkbox]{
+  accent-color: var(--blue-bulletin);
+
+}
+
+form legend{
+  text-transform: uppercase;
+}
+
+form input[type=submit]{
+  background-color: var(--blue-bulletin);
+  text-transform: uppercase;
+  color: var(--watchdog-white);
+  box-shadow: var(--shadow);
+  border-left: 2px solid var(--truth-text);
+  border-top: 2px solid var(--truth-text);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  height: 3em;
+  width: 97%;
+  transition: var(--transition);
+}
+
+form input[type=submit]:hover{
+  background-color: var(--watchdog-white);
+  color: var(--blue-bulletin);
+}
+
+footer{
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+footer ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+footer ul li{
+  text-transform: uppercase;
+  background-color: var(--news-flash);
+  border: 2px solid var(--news-flash);
+  padding: 0.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+footer ul li:hover{
+  background-color: var(--blue-bulletin);
+  transform: scale(105%);
+}
+
+footer small{
+display: block;
+text-align: center;
+}
 
 /* ///ADD/// medium styles 620px */
 
