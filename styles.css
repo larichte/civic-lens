@@ -485,7 +485,39 @@ text-align: center;
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: light) {
+    body{
+      background-color: var(--watchdog-white);
+      color: var(--truth-text);
+    }
+}
 
+@media (prefers-color-scheme: dark) {
+    body{
+      background-color: var(--truth-text);
+      color: var(--watchdog-white);
+    }
+}
+/* ---------------------------------------I think we figured it out---------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  /*
+  element{
+    transition: none;
+  } 
+  
+  element{
+    transform: none;
+  }
+  */
+/* Possible Example: */
+  #breaking-news section{
+    transition:none;
+  }
+
+  #breaking-news section:hover{
+    transform: none;
+  }
+}
 
 /* Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
