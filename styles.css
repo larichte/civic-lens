@@ -385,16 +385,26 @@ text-align: center;
     margin: 1rem auto;
   }
 
-  .menu a{
+  .mobile-nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color: var(--watchdog-white);
     font-family: var(--font-body);
     font-size: 1.15em;
+  }
+
+  .mobile-nav ul li{
     background-color: var(--news-flash);
     padding: 0.5rem;
     margin: 0.5rem;
+    border: 2px solid var(--news-flash);
+    transition: var(--transition);
   }
+
+  .mobile-nav ul li:hover{
+    background-color: var(--blue-bulletin);
+  }
+
 
   #breaking-news{
     display: grid;
@@ -500,16 +510,7 @@ text-align: center;
 }
 /* ---------------------------------------I think we figured it out---------------------------------- */
 @media (prefers-reduced-motion: reduce){
-  /*
-  element{
-    transition: none;
-  } 
-  
-  element{
-    transform: none;
-  }
-  */
-/* Possible Example: */
+
   #breaking-news section{
     transition:none;
   }
@@ -517,6 +518,23 @@ text-align: center;
   #breaking-news section:hover{
     transform: none;
   }
+
+  #featured-articles section{
+    transition: none;
+  }
+
+  #featured-articles section:hover{
+    transform: none;
+  }
+
+  footer ul li{
+    transition: none;
+  }
+
+  footer ul li:hover{
+    transform: none;
+  }
+
 }
 
 /* Feature Query for :has() that checks if the #menu-toggle is checked */
