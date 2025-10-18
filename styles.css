@@ -468,6 +468,19 @@ text-align: center;
 
 
 /* ///ADD/// x-large styles 1024px */
+@media screen and (min-width: 1024px){
+  #featured-articles{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  form fieldset{
+    grid-template-columns: repeat(4, 30px auto);
+  }
+
+  form input{
+    width: 95%;
+  }
+}
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
