@@ -469,17 +469,14 @@ text-align: center;
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px){
-  #featured-articles{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+main{
+  width: 920px;
+}
 
-  form fieldset{
-    grid-template-columns: repeat(4, 30px auto);
-  }
-
-  form input{
-    width: 95%;
-  }
+header h1, header p, header nav, footer h2, footer ul{
+  width: 920px;
+  margin: 0 auto;
+}
 }
 
 
